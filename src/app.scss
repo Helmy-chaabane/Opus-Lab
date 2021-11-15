@@ -1,4 +1,5 @@
 .main {
+  position: relative;
   color: #fff;
   padding: 5rem 10rem;
   display: grid;
@@ -7,10 +8,56 @@
 
   h1 {
     font-size: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__current {
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+    padding: 2rem 0rem;
+    margin-bottom: 2rem;
+    overflow-x: hidden;
+    h2 {
+      font-size: 4rem;
+      text-align: center;
+      transform: translateX(-100%);
+      animation: showHidden 0.5s forwards;
+    }
+  }
+
+  &__statusOptions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 0rem 2rem;
+
+    &__option {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 12rem;
+      height: 7rem;
+      background-color: red;
+      border-radius: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      transform: scale(1) translateY(0);
+      cursor: pointer;
+
+      transition: transform 0.1s;
+
+      &:hover {
+        transform: scale(1.1) translateY(0);
+      }
+
+      &:active {
+        transform: scale(1.1) translateY(-5px);
+      }
+    }
   }
 
   &__list {
+    position: relative;
     list-style: none;
     text-align: center;
     font-size: 1.6rem;
@@ -26,16 +73,15 @@
       max-height: 8rem;
       padding: 2rem 4rem;
       background-image: linear-gradient(to right, #823bf2 50%, #fff 50%);
-      background-repeat: repeat-x;
       background-size: 200% 100%;
+      background-repeat: no-repeat;
       transform: scale(1);
       cursor: pointer;
-
-      transition: transform 0.2s, background-position-x 0.3s;
+      transition: transform 0.2s, background-position-x 0.4s;
 
       &:hover {
         transform: scale(1.03) skewX(-4deg);
-        background-position-x: -100%;
+        background-position-x: 100%;
         color: Black;
         font-weight: 500;
       }
@@ -73,5 +119,21 @@
     &::selection {
       background-color: red;
     }
+  }
+
+  &__ppl {
+    position: absolute;
+    top: 20%;
+    right: 0;
+  }
+}
+
+@keyframes showHidden {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
   }
 }

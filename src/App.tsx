@@ -3,6 +3,7 @@ import "./app.scss";
 import StatusOptions from "./StatusOptions";
 
 const peaple = [
+  "Robert Julia",
   "Franquelin Benjamin",
   "Dunord Caroline",
   "Reacher Jack",
@@ -17,14 +18,14 @@ const peaple = [
 
 export enum Status {
   ABSCENT,
-  PRENSEN,
+  PRENSENT,
   EXCUSE,
 }
 interface Person {
   name: string;
   status: Status;
 }
-type AddPerson = (status: Status) => void;
+export type AddPerson = (status: Status) => void;
 
 function App() {
   const [persons, setPersons] = useState<Person[]>([]);
@@ -38,12 +39,16 @@ function App() {
   return (
     <main className="main">
       <h1>OPUS LAB TEST TECH</h1>
+      <div className="main__current">
+        <h2>Robert Julia</h2>
+      </div>
       <StatusOptions addPerson={addPerson} />
+
       <ul className="main__list">
         {peaple.map((person: string) => (
           <li className="main__list__item">
             <p>{person}</p>
-            <span>Absence</span>
+            <span>{Status.ABSCENT}</span>
           </li>
         ))}
       </ul>
