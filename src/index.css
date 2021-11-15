@@ -16,17 +16,3 @@ body {
 html {
   font-size: 62.5%;
 }
-/* 
-::-webkit-scrollbar {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: red;
-  opacity: 0.4;
-  border-radius: 2px;
-}
-
-::selection {
-  background-color: red;
-} */
