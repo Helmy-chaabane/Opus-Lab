@@ -1,0 +1,65 @@
+.main {
+  color: #fff;
+  padding: 5rem 10rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  &__list {
+    list-style: none;
+    text-align: center;
+    font-size: 1.6rem;
+    min-width: 70rem;
+    max-height: 50rem;
+    overflow-y: auto;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 98%;
+      padding: 2rem 4rem;
+      background-image: linear-gradient(to right, #823bf2 50%, #fff 50%);
+      background-repeat: repeat-x;
+      background-size: 200% 100%;
+      transform: scale(1);
+      cursor: pointer;
+
+      transition: transform 0.2s, background-position-x 0.3s;
+
+      &:hover {
+        transform: scale(1.03) skewX(-4deg);
+        background-position-x: -100%;
+        color: Black;
+        font-weight: 500;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      background-color: #823bf2;
+      border-radius: 10rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #fff;
+      border-radius: 10rem;
+      opacity: 0.4;
+      border-radius: 2px;
+    }
+
+    &::selection {
+      background-color: red;
+    }
+  }
+}
