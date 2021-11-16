@@ -1,4 +1,4 @@
-import { Status, AddPerson } from "./App";
+import { AddPerson, statusOptions, getStatus } from "./data";
 import { FC } from "react";
 
 interface StatusOptionsProps {
@@ -8,9 +8,16 @@ interface StatusOptionsProps {
 const StatusOptions: FC<StatusOptionsProps> = ({ addPerson }) => {
   return (
     <div className="main__statusOptions">
-      <div className="main__statusOptions__option ">Present</div>
-      <div className="main__statusOptions__option ">Abscent</div>
-      <div className="main__statusOptions__option ">Excusé</div>
+      {statusOptions.map((st, index: number) => (
+        <div
+          key={index}
+          className="main__statusOptions__option"
+          style={{ backgroundColor: st.backgoundColor }}
+          onClick={() => addPerson(st.status)}
+        >
+          {getStatus(st.status)}
+        </div>
+      ))}
     </div>
   );
 };
