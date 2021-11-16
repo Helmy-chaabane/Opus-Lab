@@ -1,25 +1,20 @@
 import { FC } from "react";
-import { statusOptions, getStatus, Person, Status } from "./data";
+import { statusOptions, getStatus, Person } from "./data";
 
 interface PersonListProps {
-  persons: Person[];
-  filterBy: Status;
+  filtredPerson: Person[];
 }
 
-const PersonList: FC<PersonListProps> = ({ persons, filterBy }) => {
-  const filterByStatus: () => Person[] = () => {
-    return filterBy ? persons.filter((p) => p.status === filterBy) : persons;
-  };
-
+const PersonList: FC<PersonListProps> = ({ filtredPerson }) => {
   return (
     <ul className="main__list">
-      {filterByStatus().map((person: Person, index: number) => (
+      {filtredPerson.map((person: Person, index: number) => (
         <li key={index} className="main__list__item ">
           <p>{person.name}</p>
           <span
             style={{
               backgroundColor: statusOptions.find(
-                (st) => st.status === person.status
+                (so) => so.status === person.status
               )?.backgoundColor,
             }}
           >

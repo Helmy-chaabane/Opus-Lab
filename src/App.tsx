@@ -16,6 +16,10 @@ function App() {
     }
   };
 
+  const filterByStatus: () => Person[] = () => {
+    return filterBy ? persons.filter((p) => p.status === filterBy) : persons;
+  };
+
   return (
     <main className="main">
       <h1>OPUS LAB TEST TECH</h1>
@@ -25,7 +29,7 @@ function App() {
       </div>
       <StatusOptions addPerson={addPerson} />
       <StatusTab setFilterBy={setFilterBy} filterBy={filterBy} />
-      <PersonList filterBy={filterBy} persons={persons} />
+      <PersonList filtredPerson={filterByStatus()} />
     </main>
   );
 }

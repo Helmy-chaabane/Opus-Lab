@@ -9,15 +9,15 @@ interface StatusTabProps {
 const StatusTab: FC<StatusTabProps> = ({ setFilterBy, filterBy }) => {
   return (
     <div className="main__tabs">
-      {statusOptions.map((st, index) => (
+      {statusOptions.map((so, index) => (
         <div
           key={index}
-          onClick={() => setFilterBy(st.status)}
+          onClick={() => setFilterBy(so.status)}
           className={`main__tabs__item ${
-            filterBy === st.status && "main__tabs__item__active"
+            filterBy === so.status && "main__tabs__item__active"
           }`}
         >
-          {getStatus(st.status)}
+          {getStatus(so.status)}
         </div>
       ))}
     </div>
