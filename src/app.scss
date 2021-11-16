@@ -64,6 +64,41 @@
     }
   }
 
+  &__tabs {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 1rem;
+
+    &__item {
+      position: relative;
+      padding: 2rem 3rem;
+      font-weight: bold;
+      font-size: 1.7rem;
+      cursor: pointer;
+      text-align: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 8px;
+        background-color: #823bf2;
+        transform: scaleX(0);
+        transition: transform 0.2s;
+      }
+      &__active::before {
+        transform: scaleX(1);
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
   &__list {
     position: relative;
     list-style: none;

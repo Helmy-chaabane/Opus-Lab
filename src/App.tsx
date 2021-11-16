@@ -24,7 +24,7 @@ function App() {
         <h2>{people[0] || "No more ppl"}</h2>
       </div>
       <StatusOptions addPerson={addPerson} />
-      <StatusTab setFilterBy={setFilterBy} />
+      <StatusTab setFilterBy={setFilterBy} filterBy={filterBy} />
       <PersonList filterBy={filterBy} persons={persons} />
     </main>
   );

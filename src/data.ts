@@ -25,6 +25,10 @@ interface StatusOption {
 
 const statusOptions: Array<StatusOption> = [
   {
+    backgoundColor: "",
+    status: Status.ALL,
+  },
+  {
     backgoundColor: "red",
     status: Status.ABSCENT,
   },
@@ -49,7 +53,7 @@ const getStatus: GetStatus = (status) => {
     case Status.PRESENT:
       return "Present";
     default:
-      return "";
+      return "Tous";
   }
 };
 

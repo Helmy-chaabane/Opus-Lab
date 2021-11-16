@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Person, Status, statusOptions, getStatus } from "./data";
+import { statusOptions, getStatus, Person, Status } from "./data";
 
 interface PersonListProps {
   persons: Person[];
@@ -14,7 +14,7 @@ const PersonList: FC<PersonListProps> = ({ persons, filterBy }) => {
   return (
     <ul className="main__list">
       {filterByStatus().map((person: Person, index: number) => (
-        <li key={index} className="main__list__item">
+        <li key={index} className="main__list__item ">
           <p>{person.name}</p>
           <span
             style={{
