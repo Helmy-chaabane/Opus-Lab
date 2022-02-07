@@ -8,7 +8,7 @@ interface PersonListProps {
 const PersonList: FC<PersonListProps> = ({ filtredPerson }) => {
   return (
     <ul className="main__list">
-      {filtredPerson.map((person: Person, index: number) => (
+      {filtredPerson?.map((person: Person, index: number) => (
         <li key={index} className="main__list__item ">
           <p>{person.name}</p>
           <span

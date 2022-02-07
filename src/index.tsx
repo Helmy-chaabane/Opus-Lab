@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import PersonContextProvider from "./context/PersonContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PersonContextProvider>
+      <App />
+    </PersonContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
