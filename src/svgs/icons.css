@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "icons";
+    src: url("./icons.eot?2980ea85721a360ac9b7aaef1dbd6a8a#iefix") format("embedded-opentype"),
+url("./icons.woff2?2980ea85721a360ac9b7aaef1dbd6a8a") format("woff2"),
+url("./icons.woff?2980ea85721a360ac9b7aaef1dbd6a8a") format("woff");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-briefcase:before {
+    content: "\f101";
+}
+.icon-build:before {
+    content: "\f102";
+}
+.icon-check:before {
+    content: "\f103";
+}
+.icon-face:before {
+    content: "\f104";
+}
+.icon-feedback:before {
+    content: "\f105";
+}
+.icon-filled-facebook:before {
+    content: "\f106";
+}
+.icon-filled-likedin:before {
+    content: "\f107";
+}
+.icon-filled-twitter:before {
+    content: "\f108";
+}
+.icon-full-team:before {
+    content: "\f109";
+}
+.icon-graph:before {
+    content: "\f10a";
+}
+.icon-Group:before {
+    content: "\f10b";
+}
+.icon-hands:before {
+    content: "\f10c";
+}
+.icon-java:before {
+    content: "\f10d";
+}
+.icon-language:before {
+    content: "\f10e";
+}
+.icon-left-line:before {
+    content: "\f10f";
+}
+.icon-location_city:before {
+    content: "\f110";
+}
+.icon-location_on:before {
+    content: "\f111";
+}
+.icon-mail:before {
+    content: "\f112";
+}
+.icon-node-js:before {
+    content: "\f113";
+}
+.icon-node:before {
+    content: "\f114";
+}
+.icon-phone:before {
+    content: "\f115";
+}
+.icon-php:before {
+    content: "\f116";
+}
+.icon-python:before {
+    content: "\f117";
+}
+.icon-react:before {
+    content: "\f118";
+}
+.icon-rescue:before {
+    content: "\f119";
+}
+.icon-right-line:before {
+    content: "\f11a";
+}
+.icon-rowing:before {
+    content: "\f11b";
+}
+.icon-stream:before {
+    content: "\f11c";
+}
+.icon-team:before {
+    content: "\f11d";
+}
+.icon-team2:before {
+    content: "\f11e";
+}
+.icon-touch_app:before {
+    content: "\f11f";
+}
+.icon-track_changes:before {
+    content: "\f120";
+}
+.icon-typescript:before {
+    content: "\f121";
+}
+.icon-vue-js:before {
+    content: "\f122";
+}

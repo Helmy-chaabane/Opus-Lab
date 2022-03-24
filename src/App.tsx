@@ -7,6 +7,7 @@ import PersonList from "./PersonList";
 import Accordion from "./components/accordion/Accordion";
 import "./app.scss";
 import Model from "./components/model/model";
+import "./svgs/icons.css";
 
 // import useCostumHookFun from "./hooks/CostumHookFun";
 

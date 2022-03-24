@@ -25,6 +25,16 @@ const Model: FC<ModelProps> = ({ show, setShow }) => {
       <span className="model__icon" onClick={closeModel}>
         X
       </span>
+
+      <i
+        className="icon icon-check"
+        style={{
+          fontSize: "30rem",
+          color: "red",
+          width: "2rem",
+          height: "2rem",
+        }}
+      ></i>
     </div>
   ) : null;
 };
